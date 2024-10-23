@@ -32,12 +32,12 @@ func main() {
 
 	include, err := regexp.Compile(includeChars)
 	if err != nil {
-		fmt.Printf("ERROR: invalid regex for 'include': %w\n", err)
+		fmt.Printf("ERROR: invalid regex for 'include': %s\n", err)
 		os.Exit(1)
 	}
 	filter, err := regexp.Compile(fileFilter)
 	if err != nil {
-		fmt.Printf("ERROR: invalid regex for 'filter': %w\n", err)
+		fmt.Printf("ERROR: invalid regex for 'filter': %s\n", err)
 		os.Exit(1)
 	}
 
