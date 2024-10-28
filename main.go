@@ -16,14 +16,12 @@ var (
 	verbose      bool
 )
 
-func init() {
+func main() {
 	flag.StringVar(&includeChars, "i", ".*", "characters to include (regex)")
 	flag.StringVar(&fileFilter, "f", ".*", "filter files to read (regex)")
 	flag.BoolVar(&verbose, "v", false, "enable verbose output")
 	flag.Parse()
-}
 
-func main() {
 	if len(flag.Args()) < 1 {
 		fmt.Println("ERROR: no file or directory specified")
 		os.Exit(1)
